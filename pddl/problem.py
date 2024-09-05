@@ -111,6 +111,7 @@ class Problem:
         clone.metric = self.metric.copy() if self.metric else None
         
         clone.current_time = self.current_time
+        clone.grounding.ground_problem(clone.domain, clone)
 
         return clone
 
